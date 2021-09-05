@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+    body, html
+  {
+    height: 100%;
+    margin: 0;
+  }
+    .center
+    {
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+     }
+
+    h1 {text-align: center;}
+.container {
+  padding: 30px 50px 75px 300px;
+   text-align: center;
+}
+.center {
+  margin: 0;
+  left: 50%;
+}
+</style>
+</head>
+
+<body background="/static/images/fill.jpg" class="center">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/dashboard"> DASHBOARD </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout"></span>LOGOUT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h1>Fill the details</h1>
+<div class="site-section bg-light" id="details-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-5" >
+            <form action="/details" method="post">
+
+              <div class="form-group row">
+                <div class="col-md-12 mb-4 mb-lg-0">
+                  <input type="text" class="form-control" name="name" placeholder="Name"
+                  required data-validation-required-message="Please enter name.">
+                </div>
+              </div>
+
+                <div class="form-group row">
+                <div class="col-md-12 mb-4 mb-lg-0">
+                  <input type="text" class="form-control" name="address" placeholder="Address"
+                  required data-validation-required-message="Please enter address.">
+                </div>
+                </div>
+
+              <div class="form-group row">
+                <div class="col-md-12 mb-4 mb-lg-0">
+                  <input type="text" class="form-control" name="phn" placeholder="Phone Number"
+                  required data-validation-required-message="Please enter Phone number.">
+                </div><br>
+              </div>
+
+              <div class="form-group row">
+                <div class="center">
+                  <input type="submit" class="btn btn-sm btn-primary text-white py-3 px-5" value="Submit">
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+</div>
+</body>
+</html>

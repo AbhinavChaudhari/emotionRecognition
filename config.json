@@ -1,0 +1,11 @@
+{
+	"params":
+	{
+		"local_server":"True",
+		"local_uri":"mysql://root:@localhost/emotion",
+		"prod_uri":"mysql://root:@localhost/emotion",
+		"blog_name":"Emotion Recognition",
+		"gmail_user":"mood.elevator.04@gmail.com",
+		"gmail_password":"123456789@@abcd"
+	}
+} 

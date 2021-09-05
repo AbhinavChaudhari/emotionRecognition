@@ -1,0 +1,22 @@
+ {% extends "layout.html" %}
+  {% block body %}
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <img src="{{url_for('static', filename='images/1.png')}}" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-4 ml-auto">
+            <h2>Our Mission</h2>
+            <p>A novel approach that provides the user with a curated playlist of songs based on the mood of the user.</p>
+            <p>Music plays a very important role in human's daily life and in the modern advanced technologies.</p>
+            <p>This Mood Elevator itself selects songs according to the current mood of the user.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+   {% endblock %}

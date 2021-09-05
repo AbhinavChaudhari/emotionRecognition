@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<div lang="en">
+
+    <head>
+        <title>Patient Details</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='css8/dropdown.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            body,
+            html {
+                backdrop-filter: blur(10px);
+                height: 90%;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 5em;
+                color: #0033cc
+            }
+
+            .center {
+                height: 90%;
+                /* background: center cover no-repeat; */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+
+
+            .container {
+                padding: 30px 20%;
+                text-align: center;
+                color: white;
+            }
+
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td,
+            th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 20px;
+                font-size:large;
+            }
+
+            /* tr:nth-child(even) {
+                background-color: #dddddd;
+            } */
+        </style>
+    </head>
+
+    <body background="/static/images/hero_2.jpg" class=" bg center">
+
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="/details">ADD NEW PATIENT</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="/search">SHOW PATIENTS</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="/find">SEARCH</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            </div>
+        </nav>
+
+        <div class="center container" style="background: black;opacity:0.8; height: 80vh">
+            <div class="center text-center ">
+                <h2>Patient Details</h2>
+                <table>
+                    <tr>
+                        <th>Patient Code</th>
+                        <td>{{details.dno}}</td>
+                    </tr>
+                    <tr>
+                        <th>Patient's Name</th>
+                        <td>{{details.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Patient's Adress</th>
+                        <td>{{details.address}}</td>
+                    </tr>
+                    <tr>
+                        <th>Patient's Phone Number</th>
+                        <td>{{details.phn}}</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Visit</th>
+                        <td>{{details.date}}</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        input.value == "" ? ul.style.visibility = 'hidden' : ul.style.visibility = 'visible'
+
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                ul.style.display = 'block'
+                li[i].style.display = '';
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</div>
+
+</html>

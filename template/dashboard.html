@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+  <title>Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body, html
+  {
+    height: 100%;
+    margin: 0;
+  }
+
+  h1 {
+  text-align: center;
+  font-size: 5em;
+  colour: #0033cc
+  }
+
+    .center
+    {
+      height: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+     }
+
+
+ .container{padding: 30px 50px 75px 400px;
+ }
+  </style>
+</head>
+<body background="/static/images/inter.jpg" class="center">
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+<!--      <a class="navbar-brand" href="/details"><h5>ADD NEW PATIENT</h5></a>-->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav">
+        <li><a href="/details">ADD NEW PATIENT</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li><a href="/search">SHOW PATIENTS</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li><a href="/find">SEARCH</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout"></span>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+<div class="col-lg-6 text-center">
+  <h1 style="color:voilet;"><strong>MOOD ELEVATOR</strong></h1>
+  <p>Towards your happy self</p>
+
+</div>
+</div>
+</body>
+</div>
+</html>
+
